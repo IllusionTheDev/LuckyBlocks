@@ -1,0 +1,9 @@
+name: LuckyBlocks
+version: 1
+api-version: 1.15
+main: me.imillusion.luckyblocks.LuckyBlocks
+
+commands:
+  luckyblockreload:
+    usage: /<command>
+    description: reloads

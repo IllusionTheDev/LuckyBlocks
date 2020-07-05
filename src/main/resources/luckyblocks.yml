@@ -1,0 +1,44 @@
+luckyblocks:
+  world:
+    1:
+      permission: "luckyblocks.break.world"
+      type: SPONGE
+      drops:
+        commands:
+          1: # this can be any character just use numbers to make it cleaner
+            commands:
+            - '[console] eco give %player% 5000'
+            messages:
+            - '&fYou just won 5000$'
+            weight: 2
+          2: # this can be any character just use numbers to make it cleaner
+            commands:
+            - '[console] eco give %player% 10000'
+            - '[console] effect give %player% speed 30 5'
+            messages:
+            - '&fYou got speedy'
+            weight: 1
+        items:
+          1:
+            messages:
+            - 'The dark knight''s sword'
+            weight: 2
+            items:
+              1:
+                type: DIAMOND_SWORD
+                name: "" #Leave blank to use default name
+                amount: 1
+                enchants:
+                  1: # this can be any character just use numbers to make it cleaner
+                    enchant: SHARPNESS
+                    level: 1
+          2:
+            messages:
+            - '&bOo.. Shiny!'
+            weight: 5
+            items:
+              1:
+                type: DIAMOND
+                name: ""
+                amount: 1
+
