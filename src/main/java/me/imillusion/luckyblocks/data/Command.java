@@ -13,8 +13,9 @@ public class Command {
 
     public void send(Player player)
     {
-        CommandSender sender = this.sender == CommandSenderType.PLAYER ? player : Bukkit.getConsoleSender();
-
-        Bukkit.dispatchCommand(sender, (this.sender == CommandSenderType.PLAYER ? "/" : "") + command.replaceAll("%player%", player.getName()));
+        if(this.sender == CommandSenderType.PLAYER)
+            player.chat("/" + command.replaceAll("%player%", player.getName()));
+        else
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command.replaceAll("%player%", player.getName()));
     }
 }
